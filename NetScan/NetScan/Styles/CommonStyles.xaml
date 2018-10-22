@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Default coloring scheme for controls in Dark Theme-->
+    <Style x:Key="DarkThemeControlColors" TargetType="Control">
+        <Setter Property="Background" Value="{StaticResource DarkThemeBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkThemeForegroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource DarkThemeBorderBrush}"/>
+    </Style>
+
+    <!-- Default coloring scheme for window in Dark Theme -->
+    <Style x:Key="DarkThemeWindowColors" TargetType="Control" BasedOn="{StaticResource DarkThemeControlColors}">
+        <Setter Property="Background" Value="{StaticResource DarkThemeWindowBackgroundBrush}"/>
+    </Style>
+
+    <!-- Default behaviour of triggers for controls in Dark Theme -->
+    <Style x:Key="DarkThemeBasic" TargetType="Control" BasedOn="{StaticResource DarkThemeControlColors}">
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.56"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource DarkThemeMouseOverBackgroundBrush}"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background" Value="{StaticResource DarkThemeFocusedBackgroundBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Default TextBox and PasswordBox behaviour in Dark Theme -->
+    <Style x:Key="DarkThemeBasicBox" TargetType="Control" BasedOn="{StaticResource DarkThemeBasic}">
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Default Button and ToggleButton behaviour in Dark Theme -->
+    <Style x:Key="DarkThemeButton" TargetType="Control" BasedOn="{StaticResource DarkThemeBasic}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Dark theme expand Button style -->
+    <Style x:Key="DarkThemeExpandButton" TargetType="Button" BasedOn="{StaticResource DarkThemeButton}">
+        <Setter Property="Content" Value="{StaticResource DarkThemeExpandArrowImage}"/>
+        <Setter Property="BorderThickness" Value="0,1,1,1"/>
+    </Style>
+
+    <!-- Dark theme scan Button style -->
+    <Style x:Key="DarkThemeScanToggleButton" TargetType="ToggleButton" BasedOn="{StaticResource DarkThemeButton}">
+        <Setter Property="Content" Value="{StaticResource DarkThemeGreenArrowImage}"/>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content" Value="{StaticResource DarkThemeRedCrossImage}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- Dark theme window title bar Button style -->
+    <Style x:Key="DarkThemeTitleBarButton" TargetType="Button" BasedOn="{StaticResource DarkThemeButton}">
+        <Setter Property="Background" Value="{StaticResource DarkThemeWindowBackgroundBrush}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Focusable" Value="False"/>
+    </Style>
+
+    <Style x:Key="DarkThemeTitleBarCloseButton" TargetType="Button" BasedOn="{StaticResource DarkThemeTitleBarButton}">
+        <Setter Property="Content" Value="{StaticResource DarkThemeCloseWindowImage}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource DarkThemeLightRedBrush}"/>
+                <Setter Property="Content" Value="{StaticResource DarkThemeCloseWindowMouseOverImage}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- Dark theme export Button style -->
+    <Style x:Key="DarkThemeExportButton" TargetType="Button" BasedOn="{StaticResource DarkThemeButton}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{StaticResource DarkThemeWindowBackgroundBrush}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource DarkThemeWindowBackgroundBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

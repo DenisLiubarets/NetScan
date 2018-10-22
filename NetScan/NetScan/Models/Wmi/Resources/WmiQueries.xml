@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WMIQueries>
+  <WMIQuery>
+    <Class>Win32_BIOS</Class>
+    <Property>Serial</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_OperatingSystem</Class>
+    <Property>CSName</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_OperatingSystem</Class>
+    <Property>Caption</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_OperatingSystem</Class>
+    <Property>Version</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_ComputerSystem</Class>
+    <Property>Name</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_ComputerSystem</Class>
+    <Property>Model</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_ComputerSystem</Class>
+    <Property>Manufacturer</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_ComputerSystem</Class>
+    <Property>TotalPhysicalMemory</Property>
+  </WMIQuery>
+  <WMIQuery>
+    <Class>Win32_ComputerSystem</Class>
+    <Property>ChassisSKUNumber</Property>
+  </WMIQuery>
+</WMIQueries>

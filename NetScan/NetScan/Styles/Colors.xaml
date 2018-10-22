@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="Gray0">#222222</Color>
+    <Color x:Key="Gray1">#353535</Color>
+    <Color x:Key="Gray2">#404040</Color>
+    <Color x:Key="Gray3">#454545</Color>
+    <Color x:Key="Gray4">#656565</Color>
+    <Color x:Key="Gray5">#EEEEEE</Color>
+    
+    <Color x:Key="Red">#FF5050</Color>
+    <Color x:Key="Green">#50FF50</Color>
+    <Color x:Key="Blue">#55AAFF</Color>
+    
+    <SolidColorBrush x:Key="DarkThemeWindowBackgroundBrush" Color="{StaticResource Gray0}"/>
+    <SolidColorBrush x:Key="DarkThemeBackgroundBrush" Color="{StaticResource Gray1}"/>
+    <SolidColorBrush x:Key="DarkThemeForegroundBrush" Color="{StaticResource Gray5}"/>
+    <SolidColorBrush x:Key="DarkThemeBorderBrush" Color="{StaticResource Gray4}"/>
+    <SolidColorBrush x:Key="DarkThemeMouseOverBackgroundBrush" Color="{StaticResource Gray2}"/>
+    <SolidColorBrush x:Key="DarkThemeFocusedBackgroundBrush" Color="{StaticResource Gray3}"/>
+
+    <SolidColorBrush x:Key="DarkThemeLightRedBrush" Color="{StaticResource Red}"/>
+    <SolidColorBrush x:Key="DarkThemeLightGreenBrush" Color="{StaticResource Green}"/>
+    <SolidColorBrush x:Key="DarkThemeLightBlueBrush" Color="{StaticResource Blue}"/>
+
+</ResourceDictionary>
