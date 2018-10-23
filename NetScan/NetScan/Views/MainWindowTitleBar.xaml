@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="NetScan.Views.MainWindowTitleBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+
+    <Grid Panel.ZIndex="1" Background="{StaticResource DarkThemeWindowBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Window logo -->
+        <Image RenderOptions.BitmapScalingMode="HighQuality" Width="15" Height="15" Grid.Column="0" Source="pack://application:,,,/Images/Logo/icon.ico" Margin="5"/>
+        <!-- Window title text -->
+        <TextBlock RenderOptions.ClearTypeHint="Enabled" RenderOptions.EdgeMode="Aliased" Grid.Column="1" Text="NetScan v1.3 by Denis Ljubarets @ 2018" 
+                       VerticalAlignment="Center" Foreground="{StaticResource DarkThemeForegroundBrush}"/>
+
+        <!-- Window buttons -->
+        <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right">
+            <Button x:Name="WindowMinimize" Style="{StaticResource DarkThemeTitleBarButton}" Command="{Binding MinimizeCommand}"
+                        Content="{StaticResource DarkThemeMinimizeWindowImage}"/>
+            <Button x:Name="WindowMaximize" Style="{StaticResource DarkThemeTitleBarButton}" Command="{Binding MaximizeCommand}"
+                        Content="{StaticResource DarkThemeMaximizeWindowImage}"/>
+            <Button x:Name="WindowClose" Style="{StaticResource DarkThemeTitleBarCloseButton}" Command="{Binding CloseCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

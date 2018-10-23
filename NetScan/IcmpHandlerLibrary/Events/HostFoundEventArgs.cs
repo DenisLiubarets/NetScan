@@ -1,5 +1,6 @@
 ﻿using System.Net;
-namespace NetScan
+
+namespace IcmpHandlerLibrary
 {
     /// <summary>
     /// Provides data for HostFound event

@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:NetScan"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Order is important -->
+                <ResourceDictionary Source="Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Styles/ImageStyles.xaml"/>
+                <ResourceDictionary Source="Styles/CommonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/DataGridStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ListBoxStyles.xaml"/>
+                <ResourceDictionary Source="Styles/PasswordBoxStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ProgressBarStyles.xaml"/>
+                <ResourceDictionary Source="Styles/TextBoxStyles.xaml"/>
+                <ResourceDictionary Source="Styles/WindowStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace NetScan
+namespace WmiHandlerLibrary
 {
     /// <summary>
     /// Provides data for HostDetailsReceived event

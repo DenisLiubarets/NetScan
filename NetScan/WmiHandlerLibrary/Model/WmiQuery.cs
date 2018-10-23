@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetScan
+namespace WmiHandlerLibrary
 {
     /// <summary>
     /// Holds class and corresponding parameters

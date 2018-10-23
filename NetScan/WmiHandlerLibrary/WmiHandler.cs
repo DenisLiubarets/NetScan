@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using WmiLight;
 
-namespace NetScan
+namespace WmiHandlerLibrary
 {
     public class WmiHandler
     {

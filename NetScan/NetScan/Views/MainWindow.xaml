@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NetScan"
+        xmlns:local="clr-namespace:NetScan.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="505.403">
-    <Grid>
-        <TextBox x:Name="Display"/>
-    </Grid>
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/Logo/icon.ico"
+        Title="NetScan v1.3 by Denis Ljubarets @ 2018"
+        Style="{StaticResource DarkThemeWindow}">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}"
+                      CaptionHeight="{Binding TitleHeight}"
+                      CornerRadius="0"
+                      GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+    <StackPanel Orientation="Vertical">
+        <local:MainWindowTitleBar/>
+        <local:MainWindowToolbar/>
+        <local:MainWindowDataGrid/>
+        <ProgressBar x:Name="ProgressBar" Style="{StaticResource DarkThemeProgressBar}"/>
+    </StackPanel>
+    
 </Window>

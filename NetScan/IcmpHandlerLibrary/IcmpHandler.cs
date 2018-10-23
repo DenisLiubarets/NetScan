@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetScan
+namespace IcmpHandlerLibrary
 {
     /// <summary>
     /// PingHandler takes care of asynchronous ICMP requests to network

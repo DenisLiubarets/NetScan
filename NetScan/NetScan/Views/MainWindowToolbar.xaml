@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="NetScan.Views.MainWindowToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+
+    <Grid Background="{StaticResource DarkThemeWindowBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Horizontal">
+            <!-- Range -->
+            <TextBox x:Name="RangeTextBox" Width="150" Style="{StaticResource DarkThemeTextBox}" Text="{Binding Range}"/>
+            <!-- Range Expand Button -->
+            <Button x:Name="RangeExpandButton" IsTabStop="False" Margin="0" Style="{StaticResource DarkThemeExpandButton}"/>
+            <!-- Username -->
+            <TextBox x:Name="UsernameTextBox" Style="{StaticResource DarkThemeTextBox}"/>
+            <!-- Password -->
+            <PasswordBox x:Name="PasswordBox" Style="{StaticResource DarkThemePasswordBox}"/>
+            <!-- Scan Button -->
+            <ToggleButton x:Name="ScanButton" ToolTip="Start scanning" Style="{StaticResource DarkThemeScanToggleButton}"/>
+            <!-- Spinner -->
+            <Image x:Name="Spinner" Style="{StaticResource DarkThemeSpinnerImage}" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <!-- Save to Excel -->
+            <Button x:Name="SaveToExcelButton" Style="{StaticResource DarkThemeExportButton}"
+                    Margin="0, 0, 10, 0" ToolTip="Export to Excel">
+                <Image Source="/Images/icons8-xls-green-24.ico"  Style="{StaticResource DarkThemeGreenExportImage}"/>
+            </Button>
+            <!-- Save to CSV -->
+            <Button x:Name="SaveToCSVButton" Style="{StaticResource DarkThemeExportButton}"
+                    Margin="0, 0, 10, 0" ToolTip="Export to CSV">
+                <Image Source="/Images/icons8-csv-blue-24.ico" Style="{StaticResource DarkThemeBlueExportImage}"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

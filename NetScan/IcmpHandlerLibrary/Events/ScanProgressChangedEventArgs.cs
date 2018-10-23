@@ -1,4 +1,4 @@
-﻿namespace NetScan
+﻿namespace IcmpHandlerLibrary
 {
     /// <summary>
     /// Provides data for ScanProgressChanged event

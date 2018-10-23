@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="NetScan.Views.MainWindowDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+
+    <Grid>
+        <DataGrid x:Name="NetworkItemsDataGrid" Grid.Row="2" Style="{StaticResource DarkThemeDataGrid}" 
+                  ColumnHeaderStyle="{StaticResource DarkThemeDataGridHeader}" CellStyle="{StaticResource DarkThemeDataGridCell}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Hostname}"     Header="Hostname"     Width="4*"/>
+                <DataGridTextColumn Binding="{Binding IP}"           Header="IP"           Width="90"/>
+                <DataGridTextColumn Binding="{Binding MAC}"          Header="MAC"          Width="120"/>
+                <DataGridTextColumn Binding="{Binding Manufacturer}" Header="Manufacturer" Width="4*"/>
+                <DataGridTextColumn Binding="{Binding Model}"        Header="Model"        Width="4*"/>
+                <DataGridTextColumn Binding="{Binding Type}"         Header="Type"         Width="4*"/>
+                <DataGridTextColumn Binding="{Binding Serial}"       Header="Serial"       Width="3*"/>
+                <DataGridTextColumn Binding="{Binding CurrentUser}"  Header="Current user" Width="7*" MaxWidth="300"/>
+                <DataGridTextColumn Binding="{Binding OS}"           Header="OS"           Width="8*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

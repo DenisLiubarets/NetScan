@@ -104,10 +104,10 @@ namespace NetScan
         public static string ConvertIPAddressToDefaultRange(IPAddress addr)
         {
             // Change last byte of IPAddress to 1
-            addr.ChangeByteAtIndex(1, 3);
+            var ip = addr.ChangeByteAtIndex(1, 3);
 
             // Return range e.g. "192.168.0.1-254"
-            return $"{addr.ToString()}-254";
+            return $"{ip}-254";
         }
 
         /// <summary>

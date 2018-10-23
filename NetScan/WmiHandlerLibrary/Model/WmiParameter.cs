@@ -1,4 +1,4 @@
-﻿namespace NetScan
+﻿namespace WmiHandlerLibrary
 {
     /// <summary>
     /// WMI parameter
